@@ -1,97 +1,217 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's blog starter
-</h1>
+## Gatsby Starter - Calpa's Blog
 
-Kick off your project with this blog boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+[![GitHub license](https://img.shields.io/github/license/calpa/gatsby-starter-calpa-blog.svg)](https://github.com/calpa/gatsby-starter-calpa-blog/blob/master/LICENSE)
+[![Accept Pull Requests](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/calpa/gatsby-starter-calpa-blog/pulls)
+[![Twitter](https://img.shields.io/twitter/url/https/github.com/calpa/gatsby-starter-calpa-blog.svg?style=social)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fcalpa%2Fblog)
+[![Greenkeeper badge](https://badges.greenkeeper.io/calpa/gatsby-starter-calpa-blog.svg)](https://greenkeeper.io/)
+[![Build Status](https://api.travis-ci.org/calpa/gatsby-starter-calpa-blog.svg?branch=master)](https://github.com/calpa/gatsby-starter-calpa-blog/blob/master/.travis.yml)
+[![CodeFactor](https://www.codefactor.io/repository/github/calpa/gatsby-starter-calpa-blog/badge)](https://www.codefactor.io/repository/github/calpa/gatsby-starter-calpa-blog)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/69c4fc63-9bed-44e4-aee4-77ceb456f770/deploy-status)](https://app.netlify.com/sites/calpa/deploys)
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
+[繁體中文](README-zh-Hant.md) | [简体中文](README-zh-Hans.md) | [English](README.md)
 
-## 🚀 Quick start
+![Home Page](https://i.imgur.com/lVUwIZC.png)
 
-1.  **Create a Gatsby site.**
+Build a blog system like [Calpa's Blog](https://calpa.me) in ease.
 
-    Use the Gatsby CLI to create a new site, specifying the blog starter.
+If you like this project, please don't hesitate to star it. Thank you.
 
-    ```shell
-    # create a new Gatsby site using the blog starter
-    gatsby new my-blog-starter https://github.com/gatsbyjs/gatsby-starter-blog
-    ```
+## Feature
 
-1.  **Start developing.**
+### Structure
 
-    Navigate into your new site’s directory and start it up.
+1. GatsbyJS v2, faster than faster
+1. Google Analytics
+1. Offline support
+1. Web App Manifest
+1. Page pagination
+1. Netlify optimization
+1. Awesome comment component (powered by [Gitalk](https://github.com/gitalk/gitalk))
+1. Search Engine Optimization
+1. Parse Markdown in high speed (powered by [gatsby-transformer-remark](https://www.gatsbyjs.org/packages/gatsby-transformer-remark/))
+1. Support to sitemap
 
-    ```shell
-    cd my-blog-starter/
-    gatsby develop
-    ```
+### Design
 
-1.  **Open the source code and start editing!**
+1. Pagination
+1. Responsive Web Design
+1. Font Awesome is auto loaded (powered by [react-fontawesome](https://github.com/FortAwesome/react-fontawesome))
+1. Scroll smoothly (powered by [smooth-scroll](https://github.com/cferdinandi/smooth-scroll))
 
-    Your site is now running at `http://localhost:8000`!
+### Data Source
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+You can edit the posts in `/src/content/*.md`, or using Netlify-cms to edit the posts.
 
-    Open the `my-blog-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+### Customization for developers
 
-## 🧐 What's inside?
+1. SEO
+1. Styled using SCSS
+1. Data Source
 
-A quick look at the top-level files and directories you'll see in a Gatsby project.
+## Get Started
 
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    └── README.md
+### Deploy with Netlify
 
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
+Use the button below to build and deploy your own copy of the repository:
 
-2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
+<a href="https://app.netlify.com/start/deploy?repository=https://github.com/calpa/gatsby-starter-calpa-blog" target="_blank"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify"></a>
 
-3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
+After clicking that button, you’ll authenticate with GitHub and choose a repository name. Netlify will then automatically create a repository in your GitHub account with a copy of the files from the template.
 
-4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
+Next, it will build and deploy the new site on Netlify, bringing you to the blog system when the build is complete.
 
-5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.org/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
+### Code with Codesandbox
 
-6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail).
+Use the button below to code with the blog system:
 
-7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
+[![Edit blog](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/calpa/gatsby-starter-calpa-blog/tree/master/)
 
-8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.org/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
+## Prerequisites
 
-9.  **`LICENSE`**: Gatsby is licensed under the MIT license.
+1. Git
+1. Node: any 8.x version starting with 8.5.0 or greater
+1. A fork of the repo (for any contributions)
+1. A clone of the this repo on your local machine
 
-10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
+## Develop
 
-11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
+How to start this project?
 
-12. **`README.md`**: A text file containing useful reference information about your project.
+1. Install Gatsby-CLI
 
-## 🎓 Learning Gatsby
+```
+npm install --global gatsby-cli
+```
 
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
+2. Create new Gatsby project using this starter, `awesome-blog` is your blog's folder
 
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
+```
+gatsby new awesome-blog https://github.com/calpa/gatsby-starter-calpa-blog
+```
 
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
+3. Open the folder
 
-## 💫 Deploy
+```
+cd awesome-blog
+```
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-blog)
+4. Run Development Server
 
-<!-- AUTO-GENERATED-CONTENT:END -->
+   1. `npm start` to start the hot-reloading development server (powered by [Gatsby](https://www.gatsbyjs.org/))
+   1. `open http://localhost:8000` to open the site in your favorite browser
+
+## Configuration
+
+Edit the export object in `data/config`
+
+Note: [To look up theme_color hex code, click here.](https://www.colorhexa.com/)
+
+```JavaScript
+module.exports = {
+  title: 'your blog title here',
+  maxPages: 12
+  meta: {
+    description: 'blog description',
+    keyword: 'blog, JavaScript',
+    theme_color: '#hexcode',
+    favicon: 'https:yourimageurl.com',
+    google_site_verification: 'your google verification hash',
+  },
+  name: 'your name',
+  email: 'your_email@gmail.com',
+  iconUrl: 'https://youricon.jpg',
+  License: 'by',
+  url: 'https://yourblog.me',
+  about: '/2018/05/01/about-your-name/',
+  // Sidebar
+  zhihuUsername: 'your zhiu user name here',
+  githubUsername: 'your github user name here',
+  friends: [
+    {
+      title: 'friend title',
+      href: 'link to their blog',
+    }
+  ]
+```
+
+Plugins in the configuration file:
+
+```JavaScript
+gaOptimizeId: 'GTM-WHP7SC5',
+gaTrackId: 'UA-84737574-3',
+navbarList: [
+  {
+    href: '/stats/',
+    title: 'stat title',
+  },
+  {
+    href: '/tags/',
+    title: 'tags',
+  },
+  {
+    href: '/guestbook/',
+    title: 'guestbook',
+  },
+  {
+    href: '/2018/10/04/about-your-blog/',
+    title: 'your title',
+  },
+],
+redirectors: [
+  {
+    fromPath: '/',
+    toPath: '/page/1',
+  },
+],
+```
+
+Gitalk plugin configuration
+
+```JavaScript
+gitalk: {
+    clientID: '18255f031b5e11edd98a',
+    clientSecret: '2ff6331da9e53f9a91bcc991d38d550c85026714',
+    repo: 'calpa.github.io',
+    owner: 'calpa',
+    admin: ['calpa'],
+    distractionFreeMode: true,
+  },
+}
+```
+
+## Deploy
+
+[Calpa's blog](https://calpa.me) is currently using Netlify, though, you may use Github Pages as an alternative.
+
+- Github Pages
+
+  `npm run deploy` to deploy the blog to Github Pages
+
+- Netlify
+
+  Auto Deploy
+
+## Troubleshooting
+
+- For `window is defined`, wrap the require in check for window:
+
+  ```JavaScript
+  if (typeof window !== `undefined`) {
+    const module = require("module");
+  }
+  ```
+
+- `npm run reset` to clear the local cache
+- Check [GatsbyJS Debugging Docs](https://www.gatsbyjs.org/docs/debugging-html-builds/)
+
+## Contributing
+
+Please read [CONTRIBUTING.md](.github/CONTRIBUTING.md) for more information.
+
+And don't hesitate to put your star and watch this starter project.
+
+## Contact
+
+If you are interested in this project, please feel free to contact [Calpa Liu](calpaliu@gmail.com).
+
+Thanks For Contribute... :)
