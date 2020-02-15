@@ -11,7 +11,7 @@
   "about": "/2018/05/01/about-calpa-liu/",
   "email": "calpaliu@gmail.com",
   "stats": {
-    "image": "https://i.imgur.com/VjBWiSt.png",
+    "image": "https://avatars0.githubusercontent.com/u/33686751?s=460&v=4",
     "title": "過去三十日數據",
     "description": "過去三十日數據"
   },
@@ -32,8 +32,8 @@
       "title": "Calpa's Blog"
     }
   ],
-  "iconUrl": "https://i.imgur.com/kjt2x52.jpg",
-  "wordings": ["GatsbyJS, ReactJS", "全週期開發者"],
+  "iconUrl": "https://i.imgur.com/POVc9K8.jpg",
+  "wordings": ["No tlqkf Keep Going"],
   "gaTrackId": "UA-84737574-3",
   "navbarList": [
     {
@@ -63,7 +63,7 @@
     }
   ],
   "zhihuUsername": "piao-xue-wu-ying",
-  "githubUsername": "calpa",
+  "githubUsername": "LouiMinister",
   "maxPostsInPage": 10,
   "facebook": "calpablog"
 }

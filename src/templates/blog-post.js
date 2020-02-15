@@ -73,17 +73,7 @@ class BlogPost extends Component {
         <div className="col-xl-7 col-lg-6 col-md-12 col-sm-12 order-10 content">
           <Content post={html} />
           <div className="m-message" style={bgWhite}>
-            如果你覺得我的文章對你有幫助的話，希望可以推薦和交流一下。歡迎
-            <ExternalLink
-              href="https://github.com/calpa/gatsby-starter-calpa-blog"
-              title="關注和 Star 本博客"
-            />
-            或者
-            <ExternalLink
-              href="https://github.com/calpa/"
-              title="關注我的 Github"
-            />
-            。
+            이 글의 저작권은 LouiMinister의 포스팅입니다.
           </div>
 
           <div id="gitalk-container" />

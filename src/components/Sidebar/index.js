@@ -45,11 +45,7 @@ const Sidebar = ({ totalCount, latestPosts }) => (
         <h4>LouiMinister</h4>
       </Link>
       <p className="mb-1">{wordings[0]}</p>
-      <p className="mb-3">{wordings[1]}</p>
-      <Icon
-        href={`https://www.zhihu.com/people/${zhihuUsername}`}
-        icon={['fab', 'zhihu']}
-      />
+      <p className="mb-1">{wordings[1]}</p>
       <Icon
         href={`https://github.com/${githubUsername}`}
         icon={['fab', 'github']}

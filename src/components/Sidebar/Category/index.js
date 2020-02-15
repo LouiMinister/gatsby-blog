@@ -9,8 +9,8 @@ import './index.scss';
 const { friends = [] } = config;
 
 const Friend = () => (
-  <div className="friend">
-    <p>友情鏈接</p>
+  <div className="category">
+    <p>카테고리</p>
     {friends.map(friend => (
       <ExternalLink
         href={friend.href}
