@@ -72,9 +72,9 @@ class BlogPost extends Component {
         <Sidebar />
         <div className="col-xl-7 col-lg-6 col-md-12 col-sm-12 order-10 content">
           <Content post={html} />
-          <div className="m-message" style={bgWhite}>
-            이 글의 저작권은 LouiMinister의 포스팅입니다.
-          </div>
+  {/*        <div className="m-message" style={bgWhite}>
+             이 글은LouiMinister의 포스팅입니다.
+          </div>*/}
 
           <div id="gitalk-container" />
         </div>
