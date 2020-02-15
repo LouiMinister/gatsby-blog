@@ -1,101 +1,137 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
+/* eslint-disable react/destructuring-assignment */
+/* eslint react/prop-types: 0 */
 
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import { rhythm, scale } from "../utils/typography"
+// Components
+import React, { Component } from 'react';
+import { graphql } from 'gatsby';
 
-const BlogPostTemplate = ({ data, pageContext, location }) => {
-  const post = data.markdownRemark
-  const siteTitle = data.site.siteMetadata.title
-  const { previous, next } = pageContext
+import 'gitalk/dist/gitalk.css';
 
-  return (
-    <Layout location={location} title={siteTitle}>
-      <SEO
-        title={post.frontmatter.title}
-        description={post.frontmatter.description || post.excerpt}
-      />
-      <article>
-        <header>
-          <h1
-            style={{
-              marginTop: rhythm(1),
-              marginBottom: 0,
-            }}
-          >
-            {post.frontmatter.title}
-          </h1>
-          <p
-            style={{
-              ...scale(-1 / 5),
-              display: `block`,
-              marginBottom: rhythm(1),
-            }}
-          >
-            {post.frontmatter.date}
-          </p>
-        </header>
-        <section dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr
-          style={{
-            marginBottom: rhythm(1),
-          }}
+import { parseChineseDate } from '../api';
+
+import ExternalLink from '../components/ExternalLink';
+import Sidebar from '../components/Sidebar';
+import Content from '../components/Content';
+import SEO from '../components/SEO';
+
+import Header from '../components/Header';
+// import TableOfContent from '../components/TableOfContent';
+import ShareBox from '../components/ShareBox';
+
+import { config } from '../../data';
+
+// Styles
+import './blog-post.scss';
+
+const { name, iconUrl, gitalk } = config;
+
+const bgWhite = { padding: '10px 30px', background: 'white' };
+
+// Prevent webpack window problem
+const isBrowser = typeof window !== 'undefined';
+const Gitalk = isBrowser ? require('gitalk') : undefined;
+
+class BlogPost extends Component {
+  constructor(props) {
+    super(props);
+    this.data = this.props.data;
+  }
+
+  componentDidMount() {
+    const { frontmatter, id: graphqlId } = this.data.content.edges[0].node;
+    const { title, id } = frontmatter;
+
+    const GitTalkInstance = new Gitalk({
+      ...gitalk,
+      title,
+      id: id || graphqlId,
+    });
+    GitTalkInstance.render('gitalk-container');
+  }
+
+  render() {
+    const { node } = this.data.content.edges[0];
+
+    const {
+      html, frontmatter, fields, excerpt,
+    } = node;
+
+    const { slug } = fields;
+
+    const { date, headerImage, title } = frontmatter;
+
+    return (
+      <div className="row post order-2">
+        <Header
+          img={headerImage || 'https://i.imgur.com/M795H8A.jpg'}
+          title={title}
+          authorName={name}
+          authorImage={iconUrl}
+          subTitle={parseChineseDate(date)}
         />
-        <footer>
-          <Bio />
-        </footer>
-      </article>
+        <Sidebar />
+        <div className="col-xl-7 col-lg-6 col-md-12 col-sm-12 order-10 content">
+          <Content post={html} />
+          <div className="m-message" style={bgWhite}>
+            이 글의 저작권은 LouiMinister의 포스팅입니다.
+          </div>
 
-      <nav>
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
-        >
-          <li>
-            {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            )}
-          </li>
-        </ul>
-      </nav>
-    </Layout>
-  )
+          <div id="gitalk-container" />
+        </div>
+
+        <ShareBox url={slug} />
+
+        <SEO
+          title={title}
+          url={slug}
+          siteTitleAlt="Calpa's Blog"
+          isPost={false}
+          description={excerpt}
+          image={headerImage || 'https://i.imgur.com/M795H8A.jpg'}
+        />
+      </div>
+    );
+  }
 }
 
-export default BlogPostTemplate
-
 export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
-    site {
-      siteMetadata {
-        title
-      }
+  fragment post on MarkdownRemark {
+    fields {
+      slug
     }
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+    frontmatter {
       id
-      excerpt(pruneLength: 160)
-      html
-      frontmatter {
-        title
-        date(formatString: "MMMM DD, YYYY")
-        description
+      title
+      slug
+      date
+      headerImage
+    }
+  }
+
+  query BlogPostQuery($index: Int) {
+    content: allMarkdownRemark(
+      sort: { order: DESC, fields: frontmatter___date }
+      skip: $index
+      limit: 1
+    ) {
+      edges {
+        node {
+          id
+          html
+          excerpt
+          ...post
+        }
+
+        previous {
+          ...post
+        }
+
+        next {
+          ...post
+        }
       }
     }
   }
-`
+`;
+
+export default BlogPost;
