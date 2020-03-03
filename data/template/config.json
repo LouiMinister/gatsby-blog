@@ -7,7 +7,7 @@
     "theme_color": "#384f7c",
     "google_site_verification": "riZBcestky7i9xY__A-5J-2EE65T75X1u-zgbss37Io"
   },
-  "name": "calpa",
+  "name": "LouiMinister",
   "about": "/2018/05/01/about-calpa-liu/",
   "email": "calpaliu@gmail.com",
   "stats": {
@@ -32,21 +32,21 @@
       "title": "Calpa's Blog"
     }
   ],
-  "iconUrl": "https://i.imgur.com/POVc9K8.jpg",
-  "wordings": ["No tlqkf Keep Going"],
+  "iconUrl": "https://b.allthepics.net/bmo-rain.jpg",
+  "wordings": ["달리구 달려~"],
   "gaTrackId": "UA-84737574-3",
   "navbarList": [
     {
-      "href": "/guestbook/",
-      "title": "留言簿"
+      "href": "/",
+      "title": "메인"
     },
     {
       "href": "/tags/",
-      "title": "Tags"
+      "title": "태그"
     },
     {
-      "href": "/2018/05/01/about-calpa-liu/",
-      "title": "關於作者"
+      "href": "/guestbook/",
+      "title": "게스트북"
     }
   ],
   "redirectors": [

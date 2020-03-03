@@ -1,12 +1,13 @@
 ---
 templateKey: blog-post
 id: https://calpa.me/guestbook/
-title: 留言簿
+title: 게스트북
 slug: /guestbook
-date: 2017-01-01T03:48:03.125Z
+date: 2020-01-01T03:48:03.125Z
 description: ""
+headerImage: https://b.allthepics.net/firewatch-game-graphics-2560x1600.jpg
 tags:
-  - 閱讀
+- 게스트북
 ---
 
-歡迎留言
+# 게스트북
