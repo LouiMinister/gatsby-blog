@@ -1,5 +1,5 @@
 import React from 'react';
-import Index from '../components/Layout/layout';
+import Layout from '../components/Layout';
 
 function wrapLayout(WrappedComponent) {
   return class PP extends React.Component {
@@ -12,9 +12,9 @@ function wrapLayout(WrappedComponent) {
 
     render() {
       return (
-        <Index>
+        <Layout>
           <WrappedComponent {...this.props} />
-        </Index>
+        </Layout>
       );
     }
   };

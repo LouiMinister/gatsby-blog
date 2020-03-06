@@ -2,7 +2,7 @@
 import React from 'react';
 
 import Transition from '../Transition';
-import Navbar from '../Navbar';
+import Navbar from '../NavBar/index';
 import Head from './Head';
 import Footer from '../Footer';
 import './index.scss';
@@ -24,7 +24,7 @@ const Layout = ({ children, location }) => (
   </div>
 );
 
-// Layout.propTypes = {
+// Index.propTypes = {
 //   children: PropTypes.object.isRequired,
 //   location: PropTypes.any
 // };
