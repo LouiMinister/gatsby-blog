@@ -64,12 +64,12 @@ module.exports = {
         display: 'standalone',
         icons: [
           {
-            src: 'https://b.allthepics.net/bmo-rain.jpg',
+            src: '/favicons/bmo_rain_192.jpg.png',
             sizes: '192x192',
             type: 'image/png',
           },
           {
-            src: 'https://b.allthepics.net/bmo-rain.jpg',
+            src: '/favicons/bmo_rain_512.jpg.png',
             sizes: '512x512',
             type: 'image/png',
           },
