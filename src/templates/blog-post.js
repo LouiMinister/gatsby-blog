@@ -9,7 +9,7 @@ import 'gitalk/dist/gitalk.css';
 
 import { parseChineseDate } from '../api';
 
-import ExternalLink from '../components/ExternalLink';
+// import ExternalLink from '../components/ExternalLink';
 import Sidebar from '../components/Sidebar';
 import Content from '../components/Content';
 import SEO from '../components/SEO';
@@ -25,7 +25,7 @@ import './blog-post.scss';
 
 const { name, iconUrl, gitalk } = config;
 
-const bgWhite = { padding: '10px 30px', background: 'white' };
+// const bgWhite = { padding: '10px 30px', background: 'white' };
 
 // Prevent webpack window problem
 const isBrowser = typeof window !== 'undefined';
@@ -84,7 +84,7 @@ class BlogPost extends Component {
         <SEO
           title={title}
           url={slug}
-          siteTitleAlt="Calpa's Blog"
+          siteTitleAlt="LouiMinister's Blog"
           isPost={false}
           description={excerpt}
           image={headerImage || 'https://i.imgur.com/M795H8A.jpg'}

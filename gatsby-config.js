@@ -1,10 +1,10 @@
 module.exports = {
   pathPrefix: '/',
   siteMetadata: {
-    title: 'Calpa&apos;s Blog',
-    description: 'Front End Technical Blog - Calpa',
-    siteUrl: 'https://calpa.me',
-    author: 'Calpa',
+    title: 'LouiMinister&apos;s Blog',
+    description: 'Dev Blog - Calpa',
+    siteUrl: 'http://www.louiminister.me',
+    author: 'LouiMinister',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -64,12 +64,12 @@ module.exports = {
         display: 'standalone',
         icons: [
           {
-            src: '/favicons/android-chrome-192x192.png',
+            src: 'https://b.allthepics.net/bmo-rain.jpg',
             sizes: '192x192',
             type: 'image/png',
           },
           {
-            src: '/favicons/android-chrome-512x512.png',
+            src: 'https://b.allthepics.net/bmo-rain.jpg',
             sizes: '512x512',
             type: 'image/png',
           },
