@@ -34,18 +34,12 @@
   }
 
   .custom-icon {
-    i {
-      transition: background 1s cubic-bezier(0.22, 0.61, 0.36, 1);
-      background: darkcyan;
-      border-radius: 50%;
-    }
+    color: sandybrown;
+    transition: transform 0.5s;
 
     &:hover {
-      border-radius: 50%;
-
-      i {
-        background: sandybrown;
-      }
+      color: gold;
+      transform: scale(1.2);
     }
   }
 

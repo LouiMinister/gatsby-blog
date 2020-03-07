@@ -23,10 +23,9 @@ const Icon = ({ href, icon }) => (
     target="_blank"
     href={href}
     rel="external nofollow noopener noreferrer"
-    className="custom-icon"
   >
     <span className="fa-layers fa-fw fa-2x">
-      <FontAwesomeIcon icon={icon} />
+      <FontAwesomeIcon icon={icon} className={"custom-icon"}/>
     </span>
   </a>
 );
@@ -50,9 +49,9 @@ const Sidebar = ({ totalCount, latestPosts }) => (
         icon={['fab', 'github']}
       />
       <Icon href={`mailto:${email}`} icon={['far', 'envelope']} />
-      {facebook
-        && <Icon href={`https://www.facebook.com/${facebook}/`} icon={['fab', 'facebook']} />
-      }
+      {/*{facebook*/}
+      {/*  && <Icon href={`https://www.facebook.com/${facebook}/`} icon={['fab', 'facebook']} />*/}
+      {/*}*/}
       <Information totalCount={totalCount} posts={latestPosts} />
     </div>
   </header>
