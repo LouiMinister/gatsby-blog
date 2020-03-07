@@ -36,7 +36,7 @@
   .custom-icon {
     i {
       transition: background 1s cubic-bezier(0.22, 0.61, 0.36, 1);
-      background: $regal-blue;
+      background: darkcyan;
       border-radius: 50%;
     }
 
@@ -44,7 +44,7 @@
       border-radius: 50%;
 
       i {
-        background: $light-blue;
+        background: sandybrown;
       }
     }
   }
