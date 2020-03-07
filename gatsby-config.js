@@ -2,7 +2,7 @@ module.exports = {
   pathPrefix: '/',
   siteMetadata: {
     title: 'LouiMinister&apos;s Blog',
-    description: 'Dev Blog - Calpa',
+    description: 'Dev Blog - LouiMinister',
     siteUrl: 'http://www.louiminister.me',
     author: 'LouiMinister',
   },
@@ -56,8 +56,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: "Calpa's Blog",
-        short_name: 'Calpa',
+        name: "LouiMinister's Blog",
+        short_name: 'LouiMinister',
         start_url: '/',
         background_color: '#ededed',
         theme_color: '#384f7c',

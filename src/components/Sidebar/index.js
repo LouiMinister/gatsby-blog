@@ -18,14 +18,15 @@ const {
   facebook,
 } = config;
 
-const Icon = ({ href, icon }) => (
+const Icon = ({ href, icon}) => (
   <a
     target="_blank"
     href={href}
     rel="external nofollow noopener noreferrer"
   >
     <span className="fa-layers fa-fw fa-2x">
-      <FontAwesomeIcon icon={icon} className={"custom-icon"}/>
+      <FontAwesomeIcon icon={icon} className={"custom-icon"}>
+      </FontAwesomeIcon>
     </span>
   </a>
 );
