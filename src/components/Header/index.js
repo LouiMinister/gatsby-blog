@@ -27,23 +27,15 @@ const Header = ({
       {subTitle && (
         <div className="u-subtitle">
           <div className="m-left">
-            {authorImage && (
-              <img
-                src={parseImgur(authorImage, 'small-square')}
-                className="author-image"
-                alt={authorName}
-              />
-            )}
-            <span className="author-name">{authorName}</span>
           </div>
           <span className="text">{subTitle}</span>
-          {jueJinPostLink &&
-            jueJinLikeIconLink && (
-              <JueJin
-                jueJinPostLink={jueJinPostLink}
-                jueJinLikeIconLink={jueJinLikeIconLink}
-              />
-            )}
+          {/*{jueJinPostLink &&*/}
+          {/*  jueJinLikeIconLink && (*/}
+          {/*    <JueJin*/}
+          {/*      jueJinPostLink={jueJinPostLink}*/}
+          {/*      jueJinLikeIconLink={jueJinLikeIconLink}*/}
+          {/*    />*/}
+          {/*  )}*/}
         </div>
       )}
     </div>
