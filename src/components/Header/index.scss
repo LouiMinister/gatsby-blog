@@ -78,7 +78,10 @@
     color: white; // TODO: Auto change color by detect background color
   }
 
-  .u-subtitle {
+  .u-date {
+
+    font-size: 1.9rem;
+    letter-spacing: 0.2rem;
     color: white;
   }
 
@@ -101,12 +104,12 @@
       padding-top: 1.5rem;
     }
 
-    .u-subtitle {
+    .u-date {
       display: flex;
       align-self: flex-end;
       justify-content: center;
 
-      font-size: 0.75rem;
+      font-size: 0.5rem;
       line-height: 1.2rem;
       height: 1.2rem;
       width: 100%;
@@ -115,7 +118,8 @@
         margin-right: auto;
       }
 
-      .text {
+      .date {
+        font-size: 1.0rem;
         margin-right: 0.5rem;
       }
     }
@@ -128,13 +132,13 @@
 
   // For PC
   @media (min-width: 992px) {
-    .u-subtitle {
+    .u-date {
       font-size: 1rem;
     }
   }
 
   @media (min-width: 768px) and (max-width: 991.98px) {
-    .u-subtitle {
+    .u-date {
       width: auto;
       align-self: center;
     }

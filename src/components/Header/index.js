@@ -9,7 +9,7 @@ import { parseImgur } from '../../api/images';
 const Header = ({
   img,
   title,
-  subTitle,
+  date,
   authorImage,
   authorName,
   jueJinPostLink,
@@ -24,11 +24,9 @@ const Header = ({
       }}
     >
       {title && <h1 className="u-title">{title}</h1>}
-      {subTitle && (
-        <div className="u-subtitle">
-          <div className="m-left">
-          </div>
-          <span className="text">{subTitle}</span>
+      {date && (
+        <div className="u-date">
+          <span className="date">{date}</span>
           {/*{jueJinPostLink &&*/}
           {/*  jueJinLikeIconLink && (*/}
           {/*    <JueJin*/}

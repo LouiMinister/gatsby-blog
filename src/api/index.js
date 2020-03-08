@@ -29,9 +29,7 @@ const getPages = amount => new Array(amount).fill().map((_, index) => `/page/${i
 
 const overflow = () => getCurrentPage() === getMaxPages();
 
-const parseDate = date => dayjs(date).format('YYYY/MM/DD');
-
-const parseChineseDate = date => dayjs(date).format('DD/MM/YYYY');
+const parseDate = date => dayjs(date).format('YYYY년 MM월 DD일');
 
 export {
   isBrowser,
@@ -40,7 +38,6 @@ export {
   getPages,
   overflow,
   parseDate,
-  parseChineseDate,
   getPath,
   getPageNumber,
 };
