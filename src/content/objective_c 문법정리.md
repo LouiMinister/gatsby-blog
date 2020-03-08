@@ -18,7 +18,20 @@ tags:
 
 #### 함수선언
 
-```objective-c
+```ts
+import { redirect } from '@/utils/historyUtils'
+
+export function* testSaga() {
+  const isDone = yield select(app.state)
+
+  if (isDone) {
+    yield call(redirect, '/home')
+  }
+  yield put(testAction.foo())
+}
+```
+
+```objectivec
 // 인스턴스 메소드 정의 
 -(void) SampleMethod;
 // 파라미터를 받는 메서드 정의
@@ -33,7 +46,7 @@ tags:
 
 #### Output
 
-```
+```objectivec
 	Output = [object method]; 
      -> output = object.method
 	Output = [object methodWithInput:input];
@@ -59,7 +72,7 @@ tags:
 
 **objective C 에서는 두번째 파라미터부터 라벨을 붙어 메소드 명을 여러 조각으로 나누어 사용한다.**
 
-```objective-c
+```objectivec
 -(void) setCoordinatesX: (float)x y:(float)y z:(float)z;	// 선언
 [myCoordinates setCoordinatesX:1.0 y:3.0 z:7.0]; 			//호출
 ```
@@ -68,7 +81,7 @@ tags:
 
  y, z는 파라미터라기 보다 여러 조각으로 나눠진 함수명이라고 생각하는게 이해하기 쉽다.
 
-```objective-c
+```objectivec
 (BOOL)writeToFile:(NSString *)path atomically:(BOOL)useAuxiliaryFile;
 // objective c 에서는 함수명을 나눠서 사용한다.   함수명 : writeToFile : atomically;
 ```
@@ -83,7 +96,7 @@ tags:
 
 #### 일반적인 문법 
 
-```objective-c
+```objectivec
 [photo setCaption:@“Day at the Beach”];
 output = [photo caption];	
 
@@ -95,7 +108,7 @@ output = [photo caption];
 
 #### .(dot)을 이용한 문법
 
-```objective-c
+```objectivec
 photo.caption =@“Day at the Beach”; // @는 literally 라는 의미를 갖는다. (String 이 됨)
 output = photo.caption;		// 2.0 에 새로 추가된 문법
 ```
@@ -108,14 +121,14 @@ output = photo.caption;		// 2.0 에 새로 추가된 문법
 
 #### 자동 할당 
 
-```objective-c
+```objectivec
 NSString *myString = [NSString string];
 // 자동으로 생성하여 할당해주는 방법. 특수한 몇 가지 경우에만 사용 가능
 ```
 
 #### 수동 할당
 
-```objective-c
+```objectivec
 NSSString *myString = [[NSString alloc] init];
 // Nested 호출방식. 호출시 이루어지는 과정은 다음과 같다.
 // 1. NSString의 alloc메소드 호출 ->low level 호출 : 메모리 확보, 인스턴스화
@@ -141,7 +154,7 @@ NSNumber* value = [[NSNumber alloc]initWithFloat:1.0]
 
 **수동 init -> 수동 release, 자동 init -> 자동 release**
 
-```
+```objectivec
 // string1 는 자동으로 release 될 것이다.
 NSString* string1 = [NSString string];
 
@@ -159,7 +172,7 @@ string1은 함수 끝에서 자동으로 release 된다.
 
 **인스턴스 변수와 퍼블릭 메소드의 인터페이스를 정의한다.**
 
-```objective-c
+```objectivec
 <.h 파일의 예>
 #import <Cocoa/Cocoa.h>		//하나의 파일을 여러번 읽어들이는 것을 방지
     
@@ -186,7 +199,7 @@ string1은 함수 끝에서 자동으로 release 된다.
 
 
 
-```objective-c
+```objectivec
 #import "Photo.h"
 
 
@@ -205,7 +218,7 @@ string1은 함수 끝에서 자동으로 release 된다.
 
 #### # setter
 
-```
+```objectivec
 // setter 
 - (void) setCaption: (NSString*)input
 {
@@ -228,7 +241,7 @@ string1은 함수 끝에서 자동으로 release 된다.
 
 #### # Init
 
-```objective-c
+```objectivec
 - (id) init
 {
     if ( self = [super init] )	// [super init]의 결과를 self에 대입
@@ -244,7 +257,7 @@ string1은 함수 끝에서 자동으로 release 된다.
 
 #### # Dealloc
 
-```objc
+```objectivec
 - (void) dealloc		// 오브젝트가 메모리에서 삭제될 때 불려진다.
 {						//	-> 자신이 가지고 있는 인스턴스 변수들의 참조를 relaese
     
@@ -315,7 +328,7 @@ setter 에서는 auto release 사용할 것을 권고.
 
 **헤더파일**
 
-```objective-c
+```objectivec
 //NSString+Reorder
 #import <Foundation/NSString.h>
 @interface NSString (Reorder)
@@ -327,7 +340,7 @@ setter 에서는 auto release 사용할 것을 권고.
 
 **구현파일**
 
-```objective-c
+```objectivec
 #import "NSString+Reorder.h"
 #import "NSString+PathComp.h"
 
@@ -357,7 +370,7 @@ Java에서의 인터페이스와 비슷한 역활
 
 **정의방법**
 
-```objective-c
+```objectivec
 @protocol 프로토콜이름 : 상속받을 프로토콜
 - 메소드 이름
 @end
@@ -367,7 +380,7 @@ Java에서의 인터페이스와 비슷한 역활
 
 **예시**
 
-```objective-c
+```objectivec
 @protocol MyProtocol : NSObject // 프로토콜은 다른 프로토콜을 상속할 수 있다.
 -(void)requiredMethod;
 @optional
@@ -386,7 +399,7 @@ Java에서의 인터페이스와 비슷한 역활
 
 **프로토콜 따르기**
 
-```objective-c
+```objectivec
 @interface Formatter : NSObject <Formatting, Prettifying>
 <# 인터페이스 선언 #>
 @end

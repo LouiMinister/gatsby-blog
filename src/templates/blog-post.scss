@@ -1,4 +1,6 @@
 @import "../styles/colors";
+@import '../styles/variables.scss';
+@import url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css);
 
 .post {
   @media screen and (max-width: 990px) {
@@ -15,35 +17,170 @@
     }
     margin-right: auto;
 
-    a {
-      color: $light-blue;
-
-      &:hover {
-        color: $blue;
-        text-decoration: none;
-      }
-    }
-    @for $i from 1 through 6 {
-      h#{$i} {
-        font-size: 26 - $i * 2px;
-        font-weight: 400;
-      }
-    }
-
-    h2 {
-      font-weight: 600;
-    }
+    //a {
+    //  color: $light-blue;
+    //
+    //  &:hover {
+    //    color: $blue;
+    //    text-decoration: none;
+    //  }
+    //}
+    //@for $i from 1 through 6 {
+    //  h#{$i} {
+    //    font-size: 26 - $i * 2px;
+    //    font-weight: 400;
+    //  }
+    //}
+    //
+    //h2 {
+    //  font-weight: 600;
+    //}
+    //
+    //blockquote {
+    //  max-width: 100%;
+    //  width: 100%;
+    //  word-break: break-word;
+    //  caret-color: rgba(255, 255, 255, 0.9);
+    //  border-left: 3px solid currentcolor;
+    //  margin: 0; // Required
+    //  padding-left: 0.9em;
+    //  padding-right: 0.9em;
+    //}
 
     blockquote {
-      max-width: 100%;
-      width: 100%;
-      word-break: break-word;
-      caret-color: rgba(255, 255, 255, 0.9);
-      border-left: 3px solid currentcolor;
-      margin: 0; // Required
-      padding-left: 0.9em;
-      padding-right: 0.9em;
+      color: $blockquote-text-color;
     }
+
+    code[class*='language-'],
+    pre[class*='language-'] {
+      color: #e0e0e0;
+      background: none;
+      font-family: 'Fira Code', 'Consolas', 'Monaco', 'Andale Mono', 'Ubuntu Mono',
+      monospace;
+      text-align: left;
+      white-space: pre;
+      word-spacing: normal;
+      word-break: normal;
+      word-wrap: normal;
+      line-height: 1.6;
+      font-size: 13px;
+
+      -moz-tab-size: 2;
+      -o-tab-size: 2;
+      tab-size: 2;
+
+      -webkit-hyphens: none;
+      -moz-hyphens: none;
+      -ms-hyphens: none;
+      hyphens: none;
+
+      -ms-overflow-style: none; // IE 10+
+      overflow: -moz-scrollbars-none; // Firefox
+    }
+
+    pre[class*='language-']::-webkit-scrollbar {
+      display: none; // Safari and Chrome
+    }
+
+    /* Code blocks */
+    pre[class*='language-'] {
+      padding: 1.2em;
+      margin: 1.5em 0;
+      overflow: auto;
+      border-radius: 0.6em;
+    }
+
+    :not(pre) > code[class*='language-'],
+    pre[class*='language-'] {
+      background: #212121;
+    }
+
+    /* Inline code */
+    :not(pre) > code[class*='language-'] {
+      padding: 0.11em 0.3em;
+      margin: 0em 0.1em;
+      border-radius: 0.3em;
+      white-space: normal;
+      background: $inline-dimmed-color;
+      color: $inline-text-color;
+      border: 1.2px solid $inline-text-color;
+    }
+
+    .token.comment,
+    .token.block-comment,
+    .token.prolog,
+    .token.doctype,
+    .token.cdata {
+      color: #616161;
+    }
+
+    .token.punctuation {
+      color: #e0e0e0;
+    }
+
+    .token.tag,
+    .token.attr-name,
+    .token.namespace,
+    .token.deleted {
+      color: #e2777a;
+    }
+
+    .token.function-name {
+      color: #6196cc;
+    }
+
+    .token.boolean,
+    .token.number,
+    .token.function {
+      color: #ff9100;
+    }
+
+    .token.property,
+    .token.class-name,
+    .token.constant,
+    .token.symbol {
+      color: #ffff00;
+    }
+
+    .token.selector,
+    .token.important,
+    .token.atrule,
+    .token.keyword,
+    .token.builtin {
+      color: #b388ff;
+    }
+
+    .token.string,
+    .token.char,
+    .token.attr-value,
+    .token.regex,
+    .token.variable {
+      color: #00e676;
+    }
+
+    .token.operator,
+    .token.entity,
+    .token.url {
+      color: #67cdcc;
+    }
+
+    .token.important,
+    .token.bold {
+      font-weight: bold;
+    }
+    .token.italic {
+      font-style: italic;
+    }
+
+    .token.entity {
+      cursor: help;
+    }
+
+    .token.inserted {
+      color: green;
+    }
+
+
   }
 
   #gitalk-container {
