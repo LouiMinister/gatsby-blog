@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+category : iOS
 id: 20200307-1441
 title: Objective - C 문법정리
 slug: /20200307-1441

@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+category : 
 id: https://calpa.me/guestbook/
 title: 게스트북
 slug: /guestbook
