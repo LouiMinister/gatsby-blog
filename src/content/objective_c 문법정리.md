@@ -1,6 +1,5 @@
 ---
 templateKey: blog-post
-category : iOS
 id: 20200307-1441
 title: Objective - C 문법정리
 slug: /20200307-1441
@@ -8,9 +7,7 @@ date: 2020-03-07T14:51:00.125Z
 description: ""
 headerImage: https://b.allthepics.net/firewatch-game-graphics-2560x1600.jpg
 tags:
-- Objective-C
 - iOS
-- App
 ---
 
 # Objective - C 문법 정리

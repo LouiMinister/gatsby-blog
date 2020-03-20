@@ -56,6 +56,7 @@ $open-sans: "Open Sans", sans-serif; // clear-fix mixin
       // Tags, Date
       .stats {
         display: flex;
+        flex-direction: row-reverse;
         align-items: center;
         flex-wrap: wrap;
       }

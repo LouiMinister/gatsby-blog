@@ -1,6 +1,5 @@
 ---
 templateKey: blog-post
-category : etc
 id: 2019-2-15-firstposting
 title: 첫 포스팅
 slug: /2019-2-15-firstposting

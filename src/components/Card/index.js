@@ -15,7 +15,7 @@ const imageStyle = (headerImage, color) => ({
 
 const CardHeader = ({ url, image, backgroundColor }) => (
   <Link to={url} href={url}>
-    <div className="wrapper" style={imageStyle(image, backgroundColor)} />
+    {/*<div className="wrapper" style={imageStyle(image, backgroundColor)} />*/}
   </Link>
 );
 
@@ -30,28 +30,31 @@ const Card = ({
 }) => (
   <div className="col-sm-12 pb-4">
     <div className="custom-card">
-      {headerImage && (
-        <CardHeader
-          url={url}
-          image={headerImage}
-          backgroundColor={headerBackgroundColor}
-        />
-      )}
+      {/*{headerImage && (*/}
+      {/*  <CardHeader*/}
+      {/*    url={url}*/}
+      {/*    image={headerImage}*/}
+      {/*    backgroundColor={headerBackgroundColor}*/}
+      {/*  />*/}
+      {/*)}*/}
       <div className="data">
         <div className="content">
-          <div className="stats">
-            <span className="date">{date.split('T')[0]}</span>
-            {tags.map(name => (
-              <Tag name={name} key={name} />
-            ))}
-          </div>
           <Link to={url} href={url}>
             <h4 className="title">{title}</h4>
           </Link>
           <p>{description}</p>
-          <Link to={url} href={url}>
-            자세히 보기
-          </Link>
+          <div className="stats">
+
+            <div style={{position : "right"}}>
+              <span className="date">{date.split('T')[0]}</span>
+            </div>
+            {tags.map(name => (
+              <Tag name={name} key={name} />
+            ))}
+          </div>
+          {/*<Link to={url} href={url}>*/}
+          {/*  자세히 보기*/}
+          {/*</Link>*/}
         </div>
       </div>
     </div>
