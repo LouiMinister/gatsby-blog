@@ -82,7 +82,10 @@ $open-sans: "Open Sans", sans-serif; // clear-fix mixin
     background-color: $white;
 
     .title {
-      color: $light-blue;
+      //color: $light-blue;
+      color: $black;
+      margin-left: 25px;
+      font-weight: 500;
     }
 
     p {

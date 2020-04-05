@@ -42,7 +42,7 @@ const Card = ({
           <Link to={url} href={url}>
             <h4 className="title">{title}</h4>
           </Link>
-          <p>{description}</p>
+          <p style={{fontWeight: 400, marginLeft: 25}}>{description}</p>
           <div className="stats">
 
             <div style={{position : "right"}}>
