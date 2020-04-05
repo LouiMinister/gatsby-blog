@@ -1,10 +1,10 @@
 ---
 templateKey: blog-post
 id: 20200405-1643
-title: "[알고리즘-JS] 다리를 지나는 트럭"
+title: [알고리즘-JS] 다리를 지나는 트럭
 slug: /algorithm-js-truck-on-bridge
 date: 2020-04-05T16:45:00.125Z
-description: ""
+description: "js언어로 풀은 알고리즘 문제 풀이입니다."
 headerImage: https://b.allthepics.net/firewatch-game-graphics-2560x1600.jpg
 tags:
 - Alogorithm
