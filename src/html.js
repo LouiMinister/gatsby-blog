@@ -47,6 +47,7 @@ const HTML = ({
         href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.1/jquery.fancybox.min.css"
       />
       <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.1/jquery.fancybox.min.js" />
+      <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
     </body>
   </html>
 );
